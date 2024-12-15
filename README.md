@@ -73,6 +73,7 @@ Final integrated ERD and deployment diagrams.
 
 
 # Folder Structure
+```
 lms-backend/
 ├── src/
 │   ├── main/
