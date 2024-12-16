@@ -20,10 +20,10 @@ public class CourseService {
     }
 
     public List<Course> getAllCourses() {
-        return courseRepo.getCourses();
+        return courseRepo.getAllCourses();
     }
 
-    public Course getCourseById(int id) {
+    public Optional<Course> getCourseById(int id) {
         return courseRepo.getCourseById(id);
     }
 

@@ -9,10 +9,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+
 @RequestMapping("/courses/")
 public class CourseController {
     @Autowired
     CourseService courseService;
+
 
     @PostMapping
     public ResponseEntity<Course> createCourse(@RequestBody Course course) {
@@ -25,14 +27,15 @@ public class CourseController {
         return ResponseEntity.ok(courses);
     }
 
-    @GetMapping
-    public ResponseEntity<Course> getCourseById(@RequestParam int id) {
-        Course course = courseService.getCourseById(id);
-        return ResponseEntity.ok(course);
+    @GetMapping("/{Id}")
+    public ResponseEntity<Course> getCourseById(@PathVariable int Id) {
+        return courseService.getCourseById(Id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
-    @DeleteMapping
-    public ResponseEntity<Course> deleteCourseById(@RequestParam int id) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Course> deleteCourseById(@PathVariable int id) {
         boolean removed = courseService.removeCourseById(id);
         if (removed) {
             return ResponseEntity.noContent().build();

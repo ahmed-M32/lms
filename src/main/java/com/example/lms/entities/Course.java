@@ -13,7 +13,7 @@ public class Course {
 
     private String title;
     private String description;
-    private int duration;
+    private String duration;
     @Id
     private int courseId;
 
@@ -22,13 +22,13 @@ public class Course {
 
     }
 
-    public Course(String title, String description, int duration) {
+    public Course(String title, String description, String duration) {
         this.title = title;
         this.description = description;
         this.duration = duration;
     }
 
-    public Course(int courseId, String title, String description, int duration) {
+    public Course(int courseId, String title, String description, String duration) {
         this.courseId = courseId;
         this.title = title;
         this.description = description;
