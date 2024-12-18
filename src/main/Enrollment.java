@@ -4,28 +4,33 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
 
 @Getter
 @Setter
 @Entity
 public class Enrollment {
     @EmbeddedId
-    EnrollmentID enrollmentID;
+   private EnrollmentID enrollmentID;
 
-
-    @ManyToMany
-    @MapsId("user_Id")
+    @ManyToOne
+    @MapsId("userId")
     @JoinColumn(name="user_Id")
-    private Long user_Id;
+    private User Course;
 
-
-    @OneToMany
+    @ManyToOne
     @MapsId("course_Id")
     @JoinColumn(name="course_Id")
-    private int courseID;
+    private Course User;
 
     String enrollmentDate;
+
+    public Enrollment(EnrollmentID enrollmentID, com.example.lms.entities.User course, com.example.lms.entities.Course user, String enrollmentDate) {
+        this.enrollmentID = enrollmentID;
+        Course = course;
+        User = user;
+        this.enrollmentDate = enrollmentDate;
+    }
+
     public EnrollmentID getEnrollmentID() {
         return enrollmentID;
     }
@@ -34,20 +39,20 @@ public class Enrollment {
         this.enrollmentID = enrollmentID;
     }
 
-    public Long getUser_Id() {
-        return user_Id;
+    public com.example.lms.entities.User getCourse() {
+        return Course;
     }
 
-    public void setUser_Id(Long user_Id) {
-        this.user_Id = user_Id;
+    public void setCourse(com.example.lms.entities.User course) {
+        Course = course;
     }
 
-    public int getCourseID() {
-        return courseID;
+    public com.example.lms.entities.Course getUser() {
+        return User;
     }
 
-    public void setCourseID(int courseID) {
-        this.courseID = courseID;
+    public void setUser(com.example.lms.entities.Course user) {
+        User = user;
     }
 
     public String getEnrollmentDate() {
@@ -57,16 +62,5 @@ public class Enrollment {
     public void setEnrollmentDate(String enrollmentDate) {
         this.enrollmentDate = enrollmentDate;
     }
-
-
-    public Enrollment(EnrollmentID enrollmentID, Long user_Id, int courseID, String enrollmentDate) {
-        this.enrollmentID = enrollmentID;
-        this.user_Id = user_Id;
-        this.courseID = courseID;
-        this.enrollmentDate = enrollmentDate;
-    }
-
-
-
 
 }
