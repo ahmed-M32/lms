@@ -1,9 +1,19 @@
-package com.example.lms.entities;
+package com.example.lms.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+
+@Entity
+@Setter
+@Getter
 public class Question {
+    @Getter
+    @Setter
+    @Id
     private Long id;                 // Unique ID for the question
     private String questionText;     // Text of the question
     private String optionA;          // Option A
@@ -11,4 +21,5 @@ public class Question {
     private String optionC;          // Option C
     private String optionD;          // Option D
     private String correctAnswer;    // Correct answer (e.g., "A", "B")
+
 }

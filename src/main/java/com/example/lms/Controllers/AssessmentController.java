@@ -1,6 +1,6 @@
 package com.example.lms.Controllers;
 
-import com.example.lms.entities.*;
+import com.example.lms.models.*;
 import com.example.lms.services.AssessmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

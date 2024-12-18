@@ -1,6 +1,6 @@
 package com.example.lms.Repositories;
 
-import com.example.lms.entities.Enrollment;
+import com.example.lms.models.Enrollment;
 
 import java.util.List;
 

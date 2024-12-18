@@ -1,6 +1,6 @@
 package com.example.lms.Repositories;
 
-import com.example.lms.entities.Quiz;
+import com.example.lms.models.Quiz;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

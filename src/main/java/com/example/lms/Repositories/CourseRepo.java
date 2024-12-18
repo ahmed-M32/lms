@@ -1,8 +1,6 @@
 package com.example.lms.Repositories;
 
-import com.example.lms.entities.*;
-import lombok.Getter;
-import lombok.Setter;
+import com.example.lms.models.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
@@ -10,23 +8,23 @@ import java.util.*;
 
 @Repository
 public class CourseRepo {
-    private final List<Course> courses = new ArrayList<>();//act as the database
+    private final List<Course1> cours = new ArrayList<>();//act as the database
 
 
-    public void addCourse(Course course) {
-        courses.add(course);
+    public void addCourse(Course1 course1) {
+        cours.add(course1);
     }
 
-    public Optional<Course> getCourseById(int id) {
-        return courses.stream().filter(course -> course.getCourseId() == id).findFirst();
+    public Optional<Course1> getCourseById(int id) {
+        return cours.stream().filter(course1 -> course1.getCourseId() == id).findFirst();
 
     }
 
-    public List<Course> getAllCourses() {
-        return new ArrayList<>(courses);
+    public List<Course1> getAllCourses() {
+        return new ArrayList<>(cours);
     }
 
     public boolean deleteCourse(int courseId) {
-        return courses.removeIf(course -> course.getCourseId() == courseId);
+        return cours.removeIf(course1 -> course1.getCourseId() == courseId);
     }
 }

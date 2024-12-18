@@ -1,7 +1,7 @@
 package com.example.lms.Repositories;
 
-import com.example.lms.entities.Enrollment;
-import com.example.lms.entities.EnrollmentID;
+import com.example.lms.models.Enrollment;
+import com.example.lms.models.EnrollmentID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

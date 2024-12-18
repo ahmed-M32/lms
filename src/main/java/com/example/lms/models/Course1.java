@@ -8,7 +8,7 @@ import lombok.Setter;
 @Entity
 @Setter
 @Getter
-public class Course {
+public class Course1 {
 
 
     private String title;
@@ -18,17 +18,17 @@ public class Course {
     private int courseId;
 
 
-    public Course() {
+    public Course1() {
 
     }
 
-    public Course(String title, String description, String duration) {
+    public Course1(String title, String description, String duration) {
         this.title = title;
         this.description = description;
         this.duration = duration;
     }
 
-    public Course(int courseId, String title, String description, String duration) {
+    public Course1(int courseId, String title, String description, String duration) {
         this.courseId = courseId;
         this.title = title;
         this.description = description;

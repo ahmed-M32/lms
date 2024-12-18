@@ -1,6 +1,6 @@
 package com.example.lms.Controllers;
 
-import com.example.lms.entities.Course;
+import com.example.lms.models.Course1;
 import com.example.lms.services.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,25 +17,25 @@ public class CourseController {
 
 
     @PostMapping
-    public ResponseEntity<Course> createCourse(@RequestBody Course course) {
-        return ResponseEntity.ok(courseService.createCourse(course));
+    public ResponseEntity<Course1> createCourse(@RequestBody Course1 course1) {
+        return ResponseEntity.ok(courseService.createCourse(course1));
     }
 
     @GetMapping
-    public ResponseEntity<List<Course>> getAllCourses() {
-        List<Course> courses = courseService.getAllCourses();
-        return ResponseEntity.ok(courses);
+    public ResponseEntity<List<Course1>> getAllCourses() {
+        List<Course1> cours = courseService.getAllCourses();
+        return ResponseEntity.ok(cours);
     }
 
     @GetMapping("/{Id}")
-    public ResponseEntity<Course> getCourseById(@PathVariable int Id) {
+    public ResponseEntity<Course1> getCourseById(@PathVariable int Id) {
         return courseService.getCourseById(Id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Course> deleteCourseById(@PathVariable int id) {
+    public ResponseEntity<Course1> deleteCourseById(@PathVariable int id) {
         boolean removed = courseService.removeCourseById(id);
         if (removed) {
             return ResponseEntity.noContent().build();

@@ -25,13 +25,13 @@ Conceptual Viewpoint: Course and Enrollment Management
 
 ## Assigned to: Member 2
 Tasks (aligned with the AD):
-Develop APIs for course creation, media uploads, and lesson management.
+Develop APIs for course1 creation, media uploads, and lesson management.
 Implement enrollment management for students and instructors.
-Add functionality for tracking enrolled students per course.
+Add functionality for tracking enrolled students per course1.
 Deliverables:
-RESTful APIs for course operations.
-Database schema updates for course-related tables.
-Unit and integration tests for course enrollment workflows.
+RESTful APIs for course1 operations.
+Database schema updates for course1-related tables.
+Unit and integration tests for course1 enrollment workflows.
 Conceptual and Deployment Viewpoints: Assessment and Grading
 
 ## Assigned to: Member 3
@@ -48,7 +48,7 @@ Conceptual Viewpoint: Notifications and Performance Tracking
 ## Assigned to: Member 4
 Tasks (aligned with the AD):
 Build notification APIs for enrollment updates, grading, and system events.
-Implement progress tracking for students (scores, attendance, and course completion).
+Implement progress tracking for students (scores, attendance, and course1 completion).
 Extend notification features to email integration as described in the AD.
 Deliverables:
 Notification APIs (system and email).

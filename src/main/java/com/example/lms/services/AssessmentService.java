@@ -1,6 +1,6 @@
 package com.example.lms.services;
 
-import com.example.lms.entities.*;
+import com.example.lms.models.*;
 import com.example.lms.Repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

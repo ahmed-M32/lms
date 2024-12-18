@@ -1,6 +1,6 @@
 package com.example.lms.Repositories;
 
-import com.example.lms.entities.Submission;
+import com.example.lms.models.Submission;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
