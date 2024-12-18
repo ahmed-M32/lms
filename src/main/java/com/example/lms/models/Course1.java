@@ -1,4 +1,4 @@
-package com.example.lms.entities;
+package com.example.lms.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
